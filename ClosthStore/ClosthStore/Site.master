@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style4 {
+            width: 40%;
+        }
+
+        .auto-style5 {
+            width: 100%;
+            height: 150px;
+        }
+
+        .auto-style6 {
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:Image CssClass="auto-style5" ID="imgStoreLogo" runat="server" ImageUrl="~/Images/StoreLogo.jpg" Style="margin-right: 0px" />
+            <br />
+
+
+            <br />
+            <br />
+            <table class="auto-style5">
+                <tr>
+                    <td align="center" class="auto-style6">
+                        <asp:HyperLink ID="hylHome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+                    </td>
+                    <td>
+                        <table align="right" class="auto-style4">
+                            <tr>
+                                <td>
+                                    <asp:HyperLink ID="hylBasket" runat="server" NavigateUrl="~/BasketPage.aspx">Basket</asp:HyperLink>
+                                </td>
+                                <td>
+                                    <asp:HyperLink ID="hylAccount" runat="server" NavigateUrl="~/AccountPage.aspx">My Account</asp:HyperLink>
+                                </td>
+                                <td>
+                                    <asp:HyperLink ID="hylAbout" runat="server" NavigateUrl="~/AboutUsPage.aspx">About Us</asp:HyperLink>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <br />
+        </div>
+    </form>
+</body>
+</html>
